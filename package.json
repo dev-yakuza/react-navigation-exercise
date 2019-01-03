@@ -1,10 +1,12 @@
 {
   "name": "react_navigation_exercise",
-  "version": "0.0.1",
-  "private": true,
+  "version": "0.0.2",
+  "author": "dev.yakuza@gmail.com",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "ios": "react-native run-ios",
+    "android": "react-native run-android"
   },
   "dependencies": {
     "react": "16.6.3",

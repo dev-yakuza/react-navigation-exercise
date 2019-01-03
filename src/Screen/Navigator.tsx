@@ -1,6 +1,7 @@
 import {
   createSwitchNavigator,
   createBottomTabNavigator,
+  createMaterialTopTabNavigator,
   createStackNavigator,
   createAppContainer,
 } from 'react-navigation';
@@ -10,14 +11,23 @@ import Auth from './Auth';
 
 import FullDetail from './FullDetail';
 
-import FirstTab from './FirstTab';
+import TopTabFirst from './TopTabFirst';
+import TopTabSecond from './TopTabSecond';
+import TopTabThird from './TopTabThird';
+
 import SecondTab from './SecondTab';
 import ThirdTab from './ThirdTab';
 
 import Detail from './Detail';
 
+const TopTab = createMaterialTopTabNavigator({
+  TopTabFirst,
+  TopTabSecond,
+  TopTabThird,
+});
+
 const FirstTabStack = createStackNavigator({
-  FirstTab,
+  TopTab,
   Detail,
 });
 

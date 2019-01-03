@@ -13,32 +13,34 @@ interface Props {
 }
 interface State {}
 
-export default class FirstTab extends React.Component<Props, State> {
-  componentDidMount() {
-    this.props.navigation.setParams({ logout: this._logout });
-  }
-
+export default class TopTapFirst extends React.Component<Props, State> {
   render() {
     return (
       <Container>
-        <Text>First Tab</Text>
+        <Text>TopTabFirst Screen</Text>
         <Button title="Show Detail in Tab" onPress={this._showDetail} />
         <Button title="Show Full Size Detail" onPress={this._showFullDetail} />
+        <Button
+          title="navigate second bottom tab"
+          onPress={this._navigateSecondBottomTab}
+        />
         <Button title="Logout" onPress={this._logout} />
       </Container>
     );
   }
-
-  _showDetail = () => {
+  private _showDetail = (): void => {
     this.props.navigation.navigate('Detail');
   };
 
-  _showFullDetail = () => {
+  private _showFullDetail = (): void => {
     this.props.navigation.navigate('FullDetail');
   };
 
-  _logout = () => {
+  private _logout = (): void => {
     AsyncStorage.removeItem('userToken');
     this.props.navigation.navigate('Auth');
+  };
+  private _navigateSecondBottomTab = (): void => {
+    this.props.navigation.navigate('SecondTab');
   };
 }

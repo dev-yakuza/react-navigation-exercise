@@ -11,11 +11,11 @@ const Container = styled.View`
 interface Props {}
 interface State {}
 
-export default class Detail extends React.Component<Props, State> {
+export default class TopTabThird extends React.Component<Props, State> {
   render() {
     return (
       <Container>
-        <Text>Detail Screen</Text>
+        <Text>TopTabThird Screen</Text>
       </Container>
     );
   }

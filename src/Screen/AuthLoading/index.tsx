@@ -21,11 +21,6 @@ export default class AuthLoadingScreen extends React.Component<Props, State> {
     }, 1000);
   }
 
-  _bootstrapAsync = async () => {
-    const userToken = await AsyncStorage.getItem('userToken');
-    this.props.navigation.navigate(userToken ? 'MainTab' : 'Auth');
-  };
-
   render() {
     return (
       <Container>
@@ -33,4 +28,9 @@ export default class AuthLoadingScreen extends React.Component<Props, State> {
       </Container>
     );
   }
+
+  private _bootstrapAsync = async () => {
+    const userToken = await AsyncStorage.getItem('userToken');
+    this.props.navigation.navigate(userToken ? 'MainTab' : 'Auth');
+  };
 }
