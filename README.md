@@ -38,7 +38,7 @@ react-native run-android
 
 if you want to know more details about this project, please see our blog in below.
 
-- react-navigation: [https://dev-yakuza.github.io/ko/react-native/react-navigation/](https://dev-yakuza.github.io/ko/react-native/react-navigation/)
+- react-navigation: [https://dev-yakuza.github.io/en/react-native/react-navigation/](https://dev-yakuza.github.io/en/react-native/react-navigation/)
 
 ## react-navigation-exerciseドキュメント
 
