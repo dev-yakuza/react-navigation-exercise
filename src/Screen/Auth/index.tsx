@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { AsyncStorage, Text, Button } from 'react-native';
 import styled from 'styled-components/native';
+import { NavigationScreenProp, NavigationState } from 'react-navigation';
 
 const Container = styled.View`
   flex: 1;
@@ -9,7 +10,7 @@ const Container = styled.View`
 `;
 
 interface Props {
-  navigation: any;
+  navigation: NavigationScreenProp<NavigationState>;
 }
 interface State {}
 
